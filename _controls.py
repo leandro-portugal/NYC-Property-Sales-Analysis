@@ -11,7 +11,7 @@ list_of_locations ={
     "Staten Island": 5,
 }
 
-slider_size = [10, 500, 1000,  10000, 1000000]
+slider_size = [100, 500, 1000,  10000, 10000000]
 
 controls = dbc.Row([
     html.Img(id="logo", src=app.get_asset_url("logo_dark.png"),style={"width":"80%", "margin-top":"15px"}),
@@ -29,7 +29,7 @@ controls = dbc.Row([
                 marks={i: str(j) for i, j in enumerate(slider_size)}),
     html.H3("""Parâmetro""", style={"margin-top": "30px", "margin-bottom": "20px"}),
     dcc.Dropdown(
-        id="dropdown_coloer",
+        id="dropdown_color",
         options=[
             {'label': 'Ano de construção', 'value':'YEAR BUILT'},
             {'label': 'Total de unidades', 'value':'TOTAL UNITS'},
