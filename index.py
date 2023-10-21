@@ -6,6 +6,7 @@ import pandas as pd
 from app import app
 from _map import *
 from _histogram import *
+from _controls import *
 
 
 df_data=pd.read_csv("data/cleaned_data.csv", index_col=0)
@@ -23,11 +24,12 @@ df_data.loc[df_data["SALE PRICE"] < 10000, "size_m2"] = 10000
 app.layout = dbc.Container(
         children=[
             dbc.Row([
-                dbc.Col([], md=3),
+                dbc.Col([controls], md=3),
                 dbc.Col([map, hist], md=9),
             ])
 
-        ], fluid=True, )
+        ], fluid=True, 
+         style={'background-image': 'url(assets/new_york.png)', 'background-position': 'bottom center', 'background-repeat': 'no-repeat'},)
 
 
 
