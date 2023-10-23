@@ -19,8 +19,8 @@ df_data = df_data[df_data["YEAR BUILT"] > 0]
 df_data["SALE DATE"] = pd.to_datetime(df_data["SALE DATE"])
 
 df_data.loc[df_data["size_m2"] > 10000, "size_m2"] = 10000
-df_data.loc[df_data["SALE PRICE"] > 50000000, "size_m2"] = 50000000
-df_data.loc[df_data["SALE PRICE"] < 10000, "size_m2"] = 10000
+df_data.loc[df_data["SALE PRICE"] > 50000000, "SALE PRICE"] = 50000000
+df_data.loc[df_data["SALE PRICE"] < 100000, "SALE PRICE"] = 100000
 
 app.layout = dbc.Container(
         children=[
