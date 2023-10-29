@@ -28,7 +28,7 @@ controls = dbc.Row([
      dcc.Slider(min=0, max=4, id="slider-square-size",
                 marks={i: str(j) for i, j in enumerate(slider_size)}),
     html.H3("""Parâmetro""", style={"margin-top": "30px", "margin-bottom": "20px"}),
-    dcc.Dropdown(
+   dcc.Dropdown(
         id="dropdown_color",
         options=[
             {'label': 'Ano de construção', 'value':'YEAR BUILT'},
@@ -36,6 +36,6 @@ controls = dbc.Row([
             {'label': 'Preço de venda', 'value':'SALE PRICE'},
             ],
             value='SALE PRICE'
-
+           
     )
 ])
