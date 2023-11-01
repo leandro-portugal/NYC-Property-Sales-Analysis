@@ -75,4 +75,4 @@ def update_histogram(location, square_size, dropdown_color):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
